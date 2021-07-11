@@ -1,31 +1,35 @@
 .container {
     height: 80vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     width: 50%;
   }
   
   .container ul {
     list-style: none;
-    width: 100%;
+    width: 90%;
     display: inline-block;
+    max-width: 90%;
   }
   
   ul.chat li.message {
-    border: solid #dcdcdc 0.5rem;
-    border-radius: 1rem;
-    background-color: #f8f8ff;
+    border: solid #006d1f 0.5rem;
+    border-radius: 1rem 1rem 0 1rem;
+    background-color: #00ae23;
     margin: 1rem 0 1rem 0;
-    /* width: fit-content; */
+    width: fit-content;
     font-size: 1.5rem;
     padding: 1rem;
   }
   
   ul.chat li.uMessage {
-    border: solid #008000 0.5rem;
+    border: solid #3100c2 0.5rem;
+    border-radius: 1rem 1rem 1rem 0;
     margin-left: auto;
-    background-color: #008000;
+    background-color: #0c68d8;
     color: #f8f8ff;
-    /* width: fit-content; */
+    width: fit-content;
+    max-width: 90%;
+    word-wrap: break-word;
   }
   
   .input {
