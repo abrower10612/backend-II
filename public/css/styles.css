@@ -31,7 +31,7 @@
   }
   
   ul.chat li.message {
-    border: solid #006d1f 0.5rem;
+    border: solid #006d1f 3px;
     border-radius: 1rem 1rem 1rem 0;
     background-color: #00ae23;
     margin: 1rem 3px 5px 0;
@@ -43,7 +43,7 @@
   }
   
   ul.chat li.uMessage {
-    border: solid #3100c2 0.5rem;
+    border: solid #3100c2 3px;
     border-radius: 1rem 1rem 0 1rem;
     background-color: #0c68d8;
     margin: 1rem 0 5px 3px;
@@ -79,7 +79,7 @@
   .send-button {
     border: solid 5px #3100c2;
     background-color: #0c68d8;
-    color: #FFFFFF;
+    color: #FFFFFF; 
     padding: 5px 10px;
     font-size: 1.5rem;
     display: block;
@@ -90,4 +90,62 @@
     text-align: center;
     box-shadow: 5px 5px 5px #a3a3a3;
     cursor: pointer;
+  }
+
+  .form {
+    border: solid 3px #3100c2;
+    padding: 20px;
+  }
+
+  .form label {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .form input {
+    font-size: 1.5rem;
+    min-width: 320px;
+    max-width: 320px;
+    min-height: fit-content;
+    max-height: fit-content;
+  }
+
+  .form a {
+    border: solid 5px #3100c2;
+    background-color: #0c68d8;
+    color: #FFFFFF; 
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    display: block;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: fit-content;
+    max-height: fit-content;
+    text-align: center;
+    box-shadow: 5px 5px 5px #a3a3a3;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #errMsg {
+    color: red;
+    font-size: 1.5rem;
+    height: fit-content;
+    float: left;
+  }
+  
+  .not-logged-in-container {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .not-logged-in {
+    font-size: 1.5rem;
+    color: red;
+  }
+
+  .not-logged-in a {
+    text-decoration: none;
+    color: #3100c2;
   }

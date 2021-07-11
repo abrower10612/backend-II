@@ -27,13 +27,21 @@ const postMessage = () => {
   const from = user.value;
   const time = getTime();
 
-  const data = { message, from, time };
 
-  socket.emit('message', data);
 
-  addMessage(data, true);
+  if (message.length < 1) {
+    alert("Message must be at least one character, please try again.")
+  }
+  else {
+    const data = { message, from, time };
 
-  messageEl.value = '';
+    socket.emit('message', data);
+
+    addMessage(data, true);
+  
+    messageEl.value = '';
+  }
+
 };
 
 const addMessage = (data = {}, user = false) => {
