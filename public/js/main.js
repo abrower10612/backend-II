@@ -23,12 +23,16 @@ const postData = async (url = '', data = {}) => {
 };
 
 const getTime = () => {
-  const d = new Date();
+  const time = new Date();
+  if (time.getHours() >= 12) {
+    const hours = time.getHours() % 12;
+    const mins = time.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${mins} PM`;
+  }
 
-  const hours = d.getHours().toString().padStart(2, '0');
-  const mins = d.getMinutes().toString().padStart(2, '0');
-
-  return `${hours}:${mins}`;
+  const hours = time.getHours();
+  const mins = time.getMinutes().toString().padStart(2, '0');
+  return ` ${hours}:${mins} AM`;
 };
 
 const login = async () => {

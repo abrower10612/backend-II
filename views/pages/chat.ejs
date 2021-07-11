@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="/css/pr12.css" rel="stylesheet" type="text/css" />
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
     <body>
@@ -17,10 +17,12 @@
             <% if (user) { %>
                 <div class="input">
                     <p class="displayname">
-                        <%= user %>
+                        Username: <%= user %>
                     </p>
-                    <textarea name="message" id="message"></textarea>
-                    <button onclick="postMessage()">Send</button>
+                    <textarea name="message" id="message" rows="7" cols="40"></textarea>
+                    <div class="button-container">
+                        <a onclick="postMessage()" class="send-button">Send</a>
+                    </div>
                     <input type="hidden" value="<%= user %>" name="user" id="user">
                 </div>
                 <% } else { %>
@@ -30,4 +32,4 @@
 
     </html>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/pr12-chat.js"></script>
+    <script src="/js/chat.js"></script>

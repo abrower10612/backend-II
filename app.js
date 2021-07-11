@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-const liveChat = require('./routes/liveChat');
+const routes = require('./routes/routes');
 
 app
   .set('view engine', 'ejs')
@@ -17,23 +17,23 @@ app
   .use(express.static(path.join(__dirname, 'public')))
   .use(
     session({
-      secret: 'random_text',
+      secret: 'my secret',
       cookie: {
         httpOnly: false,
       },
     })
   )
-  .use('/', liveChat);
+  .use('/', routes);
 
 const server = app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const io = require('socket.io')(server);
 io.on('connection', (socket) => {
-  console.log('Client connected!');
+  console.log('Connected.');
 
   socket
     .on('disconnect', () => {
-      console.log('A client disconnected!');
+      console.log('Disconnected.');
     })
     .on('newUser', (username, time) => {
       const message = `${username} has entered the chat.`;
