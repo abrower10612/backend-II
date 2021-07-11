@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/pr12.css" rel="stylesheet" type="text/css" />
+        <title>Document</title>
+    </head>
+    <body>
+            <div class="container">
+                <h1>Login:</h1>
+                <div class="form">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username">
+                    <button onclick="login()">Enter chat</button>
+                </div>
+                <div class="container" id="errMsg">
+                    <!-- Blank area for login error messages -->
+                </div>
+            </div>
+    </body>
+
+</html>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/pr12.js"></script>
